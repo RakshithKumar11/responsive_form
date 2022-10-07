@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="forms.css" />
+    <title>Forms</title>
+    <style>
+        @media screen and (max-width: 900px){
+    .edu label, .edu input, .edu select, .personal label, .personal input, .personal select{
+        width:75%;
+        left:10%;
+        opacity: 0.7;
+    }
+    .edu input:focus , .personal input:focus{
+        opacity: 1;
+    }
+
+}
+    </style>
+  </head>
+  <body>
+    <form action="/this_is_just_a_sample.php" method="post">
+      <h1>FORMS</h1>
+              
+        <div class="personal">
+            <h2>Personal Details</h2>
+          <label for="fname">First name : </label> <br />
+          <input
+            type="text"
+            name="fname"
+            id="fname"
+            placeholder="Enter your first name"
+            maxlength="20"
+            required
+          />
+          <br />
+          <label for="lname">Last name : </label> <br />
+          <input
+            type="text"
+            name="lname"
+            id="lname"
+            placeholder="Enter your last name"
+            maxlength="20"
+            required
+          />
+          <br />
+          <label for="age">Age : </label> <br />
+          <input
+            type="text"
+            name="age"
+            id="age"
+            placeholder="Enter your age"
+            pattern="[0-9]{1,2}"
+            maxlength="2"
+            required
+          />
+          <br />
+          <label for="gender">Gender : </label> <br />
+          <select name="gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="others">Others</option>
+          </select>
+          <br />
+          <label for="city">City : </label> <br />
+          <input
+            type="text"
+            name="city"
+            id="city"
+            placeholder="Enter your city"
+            required
+          />
+          <br />
+          <label for="phone">Phone number : </label> <br />
+          <input
+            type="text"
+            name="phone"
+            id="phone"
+            placeholder="Enter your phone number"
+            pattern="[0-9]{10}"
+            maxlength="10"
+            required
+          />
+          <br />
+        </div>
+      </div>
+       
+        <div class="edu">
+            <h2>Educational details</h2>
+          <label for="sboard"> SSLC Board :</label> <br />
+          <select name="sboard" id="sboard">
+            <option value="state">State</option>
+            <option value="cbsc">CBSC</option>
+            <option value="icsc">ICSC</option>
+          </select>
+          <br />
+          <label for="school"> School name : </label> <br />
+          <input
+            type="text"
+            name="school"
+            id="school"
+            required
+            placeholder="Enter your school name"
+          />
+          <br />
+          <label for="smarks"> SSLC marks in &#37; : </label> <br />
+          <input
+            type="text"
+            name="smarks"
+            id="smarks"
+            pattern="[0-9]{1,2}.[0-9]{1,2}"
+            maxlength="5"
+            required
+            placeholder="Enter your marks"
+          />
+          <br />
+          <label for="pboard"> PUC Board :</label> <br />
+          <select name="pboard" id="pboard">
+            <option value="pstate">State</option>
+            <option value="pcbsc">CBSC</option>
+            <option value="picsc">ICSC</option>
+          </select>
+          <br />
+          <label for="puc"> College name : </label> <br />
+          <input
+            type="text"
+            name="puc"
+            id="puc"
+            required
+            placeholder="Enter your college name"
+          />
+          <br />
+          <label for="pmarks"> PUC marks in &#37; : </label> <br />
+          <input
+            type="text"
+            name="pmarks"
+            id="pmarks"
+            pattern="[0-9]{1,2}.[0-9]{1,2}"
+            maxlength="5"
+            placeholder="Enter your marks"
+            required
+          />
+          <br />
+          <label for="degree"> Degree college name : </label> <br />
+          <input
+            type="text"
+            name="degree"
+            id="degree"
+            required
+            placeholder="Enter your college name"
+          />
+          <br />
+          <label for="dmarks"> Degree marks in CGPA : </label> <br />
+          <input
+            type="text"
+            name="dmarks"
+            id="dmarks"
+            pattern="[0-9]{1}.[0-9]{2}"
+            maxlength="4"
+            placeholder="Enter your marks"
+            required
+          /> <br>
+          <input type="button" value="Submit" />
+        </div>
+     </div>
+    </form>
+  </body>
+</html>
